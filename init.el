@@ -6,7 +6,6 @@
 
 ;; display line numbers
 (setq display-line-numbers `relative)
-(global-display-line-numbers-mode t)
 
 ;; Just cleaning up an interface
 (menu-bar-mode -1)
@@ -41,7 +40,6 @@
 (straight-use-package 'evil)
 (straight-use-package 'projectile)
 (straight-use-package 'treemacs)
-(straight-use-package 'helm)
 (straight-use-package 'pdf-tools)
 (straight-use-package 'lsp-mode)
 (straight-use-package 'magit)
@@ -50,6 +48,9 @@
 (straight-use-package 'flycheck)
 (straight-use-package 'vim-empty-lines-mode)
 (straight-use-package 'smartparens)
+(straight-use-package 'ivy)
+(straight-use-package 'counsel)
+(straight-use-package 'swiper)
 
 
 ;; enable vim tildas
@@ -58,7 +59,7 @@
 ;; smartparens global-mode
 (smartparens-global-mode t)
 
-;; ENTER key parents autoindent
+;; ENTER key parents autoinden 
 (defun indent-between-pair (&rest _ignored)
   (newline)
   (indent-according-to-mode)
@@ -71,3 +72,20 @@
 
 (require 'evil)
 (evil-mode 1)
+(ivy-mode 1)
+
+;; key settings
+(global-set-key
+ (kbd "C-x w d")
+ 'delete-window
+ )
+
+(global-set-key
+ (kbd "C-s")
+ 'swiper
+ )
+
+(global-set-key
+ (kbd "<escape>")
+ 'keyboard-escape-quit
+ )
