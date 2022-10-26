@@ -6,6 +6,7 @@
 
 ;; display line numbers
 (setq display-line-numbers `relative)
+(global-display-line-numbers-mode t)
 
 ;; Just cleaning up an interface
 (menu-bar-mode -1)
@@ -47,6 +48,26 @@
 (straight-use-package 'rainbow-delimiters)
 (straight-use-package 'minimap)
 (straight-use-package 'flycheck)
+(straight-use-package 'vim-empty-lines-mode)
+(straight-use-package 'smartparens)
+
+
+;; enable vim tildas
+(global-vim-empty-lines-mode)
+
+;; smartparens global-mode
+(smartparens-global-mode t)
+
+;; ENTER key parents autoindent
+(defun indent-between-pair (&rest _ignored)
+  (newline)
+  (indent-according-to-mode)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+(sp-local-pair 'prog-mode "{" nil :post-handlers '((indent-between-pair "RET")))
+(sp-local-pair 'prog-mode "[" nil :post-handlers '((indent-between-pair "RET")))
+(sp-local-pair 'prog-mode "(" nil :post-handlers '((indent-between-pair "RET")))
 
 (require 'evil)
 (evil-mode 1)
