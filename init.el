@@ -64,6 +64,7 @@
 (straight-use-package 'vterm)
 (straight-use-package 'which-key)
 (straight-use-package 'ivy-rich)
+(straight-use-package 'helpful)
 
 
 ;; ivy-rich mode
