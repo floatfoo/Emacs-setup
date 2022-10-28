@@ -65,6 +65,9 @@
 (straight-use-package 'which-key)
 (straight-use-package 'ivy-rich)
 (straight-use-package 'helpful)
+;; for the first-time usage run
+;; M-x all-the-icons-install-fonts
+(straight-use-package 'all-the-icons)
 
 
 ;; ivy-rich mode
