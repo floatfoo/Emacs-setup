@@ -63,7 +63,11 @@
 (straight-use-package 'doom-themes)
 (straight-use-package 'vterm)
 (straight-use-package 'which-key)
+(straight-use-package 'ivy-rich)
 
+
+;; ivy-rich mode
+(ivy-rich-mode t)
 
 ;; which-key config
 (which-key-mode 1)
