@@ -41,6 +41,9 @@
       (eval-print-last-sexp)))
   (load bootstrap-file nil 'nomessage))
 
+;; said to set before loading doom-modeline
+(setq doom-modeline-support-imenu t)
+
 ;; staright.el packages
 (straight-use-package 'evil)
 (straight-use-package 'projectile)
@@ -59,7 +62,11 @@
 (straight-use-package 'doom-modeline)
 (straight-use-package 'doom-themes)
 (straight-use-package 'vterm)
+(straight-use-package 'which-key)
 
+
+;; which-key config
+(which-key-mode 1)
 
 ;; enable vim tildas
 (global-vim-empty-lines-mode)
@@ -83,6 +90,10 @@
 ;; doom-modeline setup
 (setq doom-modeline-height 25)
 (setq doom-modeline-bar-width 4)
+(setq doom-modeline-project-detection 'auto)
+(setq doom-modeline-icon t)
+(setq doom-modeline-major-mode-icon t)
+(setq doom-modeline-major-mode-color-icon t)
 
 (sp-local-pair 'prog-mode "{" nil :post-handlers '((indent-between-pair "RET")))
 (sp-local-pair 'prog-mode "[" nil :post-handlers '((indent-between-pair "RET")))
