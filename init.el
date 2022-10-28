@@ -125,6 +125,11 @@
  )
 
 (global-set-key
+ (kbd "C-x o")
+ 'treemacs
+ )
+
+(global-set-key
  (kbd "<escape>")
  'keyboard-escape-quit
  )
