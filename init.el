@@ -2,7 +2,8 @@
 (setq make-backup-files nil)
 
 ;; Set font and its size
-(set-frame-font "Hack Nerd Font 13" nil t)
+;;(set-frame-font "Hack Nerd Font 13" nil t) ;; emacsclient zoomed out
+(add-to-list 'default-frame-alist '(font . "Hack Nerd Font 13"))
 
 ;; display line numbers
 (global-display-line-numbers-mode 1)
