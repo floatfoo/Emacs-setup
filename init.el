@@ -70,7 +70,14 @@
 ;; M-x all-the-icons-install-fonts
 (straight-use-package 'all-the-icons)
 (straight-use-package 'yasnippet-snippets)
+(straight-use-package 'auto-complete)
 
+
+;; autocomplete
+(global-auto-complete-mode t)
+
+;; flycheck
+(global-flycheck-mode 1)
 
 ;; yasnippets
 (yas-global-mode 1)
