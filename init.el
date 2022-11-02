@@ -87,7 +87,7 @@
 (doom-modeline-mode 1)
 
 ;; theme
-(load-theme 'doom-acario-dark)
+(load-theme 'doom-acario-dark t)
 
 ;; ENTER key parents autoinden 
 (defun indent-between-pair (&rest _ignored)
