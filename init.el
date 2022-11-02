@@ -100,6 +100,9 @@
 ;; theme
 (load-theme 'doom-acario-dark t)
 
+;; projectile
+(projectile-mode t)
+
 ;; ENTER key parents autoinden 
 (defun indent-between-pair (&rest _ignored)
   (newline)
@@ -144,6 +147,11 @@
 (global-set-key
  (kbd "<escape>")
  'keyboard-escape-quit
+ )
+
+(global-set-key
+ (kbd "C-x p p")
+ 'projectile-switch-project
  )
 
 (custom-set-variables
