@@ -69,7 +69,11 @@
 ;; for the first-time usage run
 ;; M-x all-the-icons-install-fonts
 (straight-use-package 'all-the-icons)
+(straight-use-package 'yasnippet-snippets)
 
+
+;; yasnippets
+(yas-global-mode 1)
 
 ;; ivy-rich mode
 (ivy-rich-mode t)
