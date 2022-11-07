@@ -21,6 +21,10 @@
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 
+;; opacity
+(set-frame-parameter (selected-frame) 'alpha '(85 . 50))
+(add-to-list 'default-frame-alist '(alpha . (85 . 50)))
+
 ;; smooth scrolling
 (setq redisplay-dont-pause t
   scroll-margin 1
@@ -69,7 +73,6 @@
 ;; for the first-time usage run
 ;; M-x all-the-icons-install-fonts
 (straight-use-package 'all-the-icons)
-(straight-use-package 'yasnippet-snippets)
 (straight-use-package 'auto-complete)
 
 
@@ -78,9 +81,6 @@
 
 ;; flycheck
 (global-flycheck-mode 1)
-
-;; yasnippets
-(yas-global-mode 1)
 
 ;; ivy-rich mode
 (ivy-rich-mode t)
