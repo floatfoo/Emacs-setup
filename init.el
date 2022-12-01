@@ -76,8 +76,6 @@
 (straight-use-package 'company-box)
 (straight-use-package 'lsp-ivy)
 
-;; lsp-ivy (???)
-(lsp-ivy-global-workspace-symbol t)
 
 ;; autocompletion
 (company-box-mode t)
@@ -149,6 +147,11 @@
  )
 
 (global-set-key
+ (kbd "C-x w o")
+ 'treemacs-select-window
+ )
+
+(global-set-key
  (kbd "<escape>")
  'keyboard-escape-quit
  )
@@ -156,6 +159,28 @@
 (global-set-key
  (kbd "C-x p p")
  'projectile-switch-project
+ )
+
+;; windows switching
+
+(global-set-key
+ (kbd "C-x w h")
+ 'windmove-left
+ )
+
+(global-set-key
+ (kbd "C-x w j")
+ 'windmove-down
+ )
+
+(global-set-key
+ (kbd "C-x w k")
+ 'windmove-up
+ )
+
+(global-set-key
+ (kbd "C-x w l")
+ 'windmove-right
  )
 
 (custom-set-variables
