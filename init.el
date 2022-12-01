@@ -73,11 +73,7 @@
 ;; for the first-time usage run
 ;; M-x all-the-icons-install-fonts
 (straight-use-package 'all-the-icons)
-(straight-use-package 'auto-complete)
 
-
-;; autocomplete
-(global-auto-complete-mode t)
 
 ;; flycheck
 (global-flycheck-mode 1)
