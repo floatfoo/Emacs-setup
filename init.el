@@ -73,7 +73,15 @@
 ;; for the first-time usage run
 ;; M-x all-the-icons-install-fonts
 (straight-use-package 'all-the-icons)
+(straight-use-package 'company-box)
+(straight-use-package 'lsp-ivy)
 
+;; lsp-ivy (???)
+(lsp-ivy-global-workspace-symbol t)
+
+;; autocompletion
+(company-box-mode t)
+(global-company-mode t)
 
 ;; flycheck
 (global-flycheck-mode 1)
